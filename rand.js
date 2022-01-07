@@ -1,19 +1,14 @@
 let n ;
-let s = 2;
+let s = 5;
 let sco = 0 ; 
-let l = 24;
-let m = 16 ;
-let lvl = 1 ;
-document.getElementById("lvl").innerHTML = lvl;
-let rand = Math.random();
-let rando = rand ; 
+
+rand = Math.random();
+rando = rand ; 
 rando = rando*10;
             a = (Math.floor(rando)%10);
-            let att = l;
+            let att = 24 ;
             let re = 0 ;
-             let wrg = 0 ;   
-             let w = 5 ;
-                   
+             let wrg = 0 ;         
 function one()
 {
  n= 1 ;
@@ -33,12 +28,10 @@ function one()
             a = (Math.floor(rando)%10);
 att=att-1 ;
 document.getElementById("attempt").innerHTML= "Attempts left =" + att ;
-  document.getElementById("wng").innerHTML= "wrong =" + wrg+"/"+w ;
-if((sco==m)&&(att>0))
+  document.getElementById("wng").innerHTML= "wrong =" + wrg+"/3" ;
+if((sco==16)&&(att>0))
         {
             alert("Yeahh ! you won reload the page  to start again");
-            nextLevel();
-            
         }
 if(att<=0)
     
@@ -56,8 +49,8 @@ if(n!=re) {
  
     document.getElementById("score").innerHTML = "score" + "=" + sco ;
     document.getElementById("attempt").innerHTML= "Attempts left =" + att ;
-  document.getElementById("wng").innerHTML= "wrong =" + wrg+"/"+w ;
-   if(wrg==w)
+  document.getElementById("wng").innerHTML= "wrong =" + wrg+"/3" ;
+   if(wrg==3)
    {
       sco = 0 ;
       att = 0 ;
@@ -70,12 +63,11 @@ if(n!=re) {
        document.getElementById("attempt").innerHTML= "OOPS you are out of attempts  reload the page  to start again" ;
       
     
-    if((sco==m)&&(att>0))
+    if((sco==16)&&(att>0))
     {
         alert("Yeahh ! you won  reload the page  to start again ");
-        nextLevel();
     }
-    if(sco!=m)
+    if(sco!=16)
     {
         alert("Sorry you Lost  reload the page  to start again");
     }
@@ -104,13 +96,11 @@ if(n==re)
             a = (Math.floor(rando)%10);
 att=att-1 ;
 document.getElementById("attempt").innerHTML= "Attempts left = " +att ;
- document.getElementById("wng").innerHTML= "wrong =" + wrg+"/"+w ;
-if((sco==m)&&(att>0))
+ document.getElementById("wng").innerHTML= "wrong =" + wrg+"/3" ;
+if((sco==16)&&(att>0))
         {
             
             alert("Yeahh ! you won   reload the page  to start again");
-            nextLevel();
-            
         }
 if(att<=0)
     
@@ -130,8 +120,8 @@ if(n!=re) {
    
     document.getElementById("score").innerHTML = "score" + "=" + sco ;
     document.getElementById("attempt").innerHTML= "Attempts left =" + att ;
-  document.getElementById("wng").innerHTML= "wrong =" + wrg+"/"+w ;
-    if(wrg==w)
+  document.getElementById("wng").innerHTML= "wrong =" + wrg+"/3" ;
+    if(wrg==3)
     {
        sco = 0 ;
        att = 0 ;
@@ -142,12 +132,11 @@ if(att<=0)
      {
         
         document.getElementById("attempt").innerHTML= "OOPS you are out of attempts  reload the page  to start again" ;
-        if((sco==m)&&(att>0))
+        if((sco==16)&&(att>0))
         {
             alert("Yeahh ! you won reload the page  to start again ");
-            nextLevel();
         }
-        if(sco!=m)
+        if(sco!=16)
         {
             alert("Sorry you Lost  reload the page  to start again");
         }
@@ -158,10 +147,4 @@ if(att<=0)
  
 }
 
-}
-function nextLevel(){
-    m=m+8;
-    l=l+8;
-    s =s+1;
-    lvl = lvl + 1 ;
 }
